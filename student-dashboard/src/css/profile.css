@@ -1,0 +1,75 @@
+.profile-card {
+  max-width: 460px;
+  margin: 0 auto;
+  padding: 32px 28px;
+  text-align: center;
+}
+
+.profile-photo-wrap {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 14px;
+}
+
+.profile-photo {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  color: #fff;
+  font-size: 34px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.25);
+}
+
+.profile-name {
+  font-size: 20px;
+  font-weight: 700;
+  margin-top: 6px;
+}
+
+.profile-roll {
+  color: var(--color-text-muted);
+  font-size: 13.5px;
+  margin: 4px 0 12px;
+}
+
+.profile-details {
+  margin-top: 24px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.profile-detail-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px 4px;
+  border-bottom: 1px solid var(--color-border);
+  font-size: 13.5px;
+}
+
+.profile-detail-row:last-child {
+  border-bottom: none;
+}
+
+.profile-detail-row span {
+  color: var(--color-text-muted);
+}
+
+.profile-detail-row strong {
+  color: var(--color-text);
+  font-weight: 600;
+  text-align: right;
+}
+
+.profile-edit-btn {
+  margin-top: 24px;
+  width: 100%;
+}

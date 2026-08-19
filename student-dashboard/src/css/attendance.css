@@ -1,0 +1,90 @@
+.attendance-summary {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 24px 28px;
+  margin-bottom: 20px;
+}
+
+.attendance-ring-wrap {
+  position: relative;
+  width: 96px;
+  height: 96px;
+  min-width: 96px;
+}
+
+.attendance-ring-value {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--color-text);
+}
+
+.attendance-summary-text h3 {
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.attendance-summary-text p {
+  color: var(--color-text-muted);
+  font-size: 13.5px;
+  margin-top: 4px;
+}
+
+.attendance-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.attendance-row {
+  padding: 18px 20px;
+}
+
+.attendance-row-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.attendance-subject {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.progress-track {
+  height: 8px;
+  border-radius: 999px;
+  background: var(--color-bg);
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: 999px;
+  transition: width 0.4s ease;
+}
+
+.progress-success {
+  background: linear-gradient(90deg, #22c55e, #16a34a);
+}
+
+.progress-warning {
+  background: linear-gradient(90deg, #f59e0b, #d97706);
+}
+
+.progress-danger {
+  background: linear-gradient(90deg, #f87171, #dc2626);
+}
+
+.attendance-row-bottom {
+  margin-top: 8px;
+  font-size: 12px;
+  color: var(--color-text-muted);
+}

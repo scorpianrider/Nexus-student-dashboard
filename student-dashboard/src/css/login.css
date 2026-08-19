@@ -1,0 +1,230 @@
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(160deg, #eef3fc 0%, #f4f6f9 55%, #eef3fc 100%);
+  padding: 20px;
+}
+
+.login-shell {
+  display: flex;
+  width: 100%;
+  max-width: 920px;
+  background: var(--color-card);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+  min-height: 560px;
+}
+
+.login-aside {
+  flex: 1;
+  background: linear-gradient(150deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+  color: #fff;
+  padding: 44px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+
+.login-aside::before {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  top: -100px;
+  right: -100px;
+}
+
+.login-aside::after {
+  content: "";
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.07);
+  bottom: -80px;
+  left: -60px;
+}
+
+.login-aside-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  position: relative;
+  z-index: 1;
+}
+
+.login-aside-logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 18px;
+}
+
+.login-aside-brand span {
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.login-aside-headline {
+  position: relative;
+  z-index: 1;
+}
+
+.login-aside-headline h1 {
+  font-size: 28px;
+  font-weight: 800;
+  line-height: 1.35;
+}
+
+.login-aside-headline p {
+  margin-top: 12px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.6;
+  max-width: 320px;
+}
+
+.login-aside-foot {
+  position: relative;
+  z-index: 1;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.login-form-side {
+  flex: 1;
+  padding: 48px 44px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.login-form-side h2 {
+  font-size: 23px;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.login-form-side > p {
+  margin-top: 6px;
+  color: var(--color-text-muted);
+  font-size: 13.5px;
+  margin-bottom: 28px;
+}
+
+.login-field {
+  margin-bottom: 18px;
+}
+
+.login-field label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: 7px;
+}
+
+.login-input-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.login-input-wrap svg {
+  position: absolute;
+  left: 14px;
+  color: var(--color-text-faint);
+  font-size: 16px;
+}
+
+.login-input-wrap input {
+  width: 100%;
+  padding: 12px 14px 12px 42px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+  font-size: 14px;
+  font-family: inherit;
+  color: var(--color-text);
+  background: var(--color-bg);
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.login-input-wrap input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  background: #fff;
+}
+
+.login-eye-btn {
+  position: absolute;
+  right: 12px;
+  background: transparent;
+  color: var(--color-text-faint);
+  font-size: 16px;
+  display: flex;
+}
+
+.login-row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 22px;
+}
+
+.login-forgot {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--color-primary);
+  background: transparent;
+}
+
+.login-forgot:hover {
+  text-decoration: underline;
+}
+
+.login-submit {
+  width: 100%;
+  padding: 13px;
+  font-size: 14.5px;
+}
+
+.login-error {
+  background: var(--color-danger-bg);
+  color: var(--color-danger);
+  font-size: 13px;
+  font-weight: 500;
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  margin-bottom: 18px;
+}
+
+.login-hint {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 12px;
+  color: var(--color-text-faint);
+}
+
+@media (max-width: 800px) {
+  .login-aside {
+    display: none;
+  }
+  .login-shell {
+    max-width: 420px;
+  }
+  .login-form-side {
+    padding: 40px 28px;
+  }
+}
