@@ -19,23 +19,22 @@ public class AttendanceController {
     }
 
     @GetMapping("/{studentId}")
-   @GetMapping("/{studentId}")
-public AttendanceResponse getAttendance(@PathVariable Integer studentId) {
-    List<Attendance> rows = attendanceRepository.findByStudentId(studentId);
+    public AttendanceResponse getAttendance(@PathVariable Integer studentId) {
+        List<Attendance> rows = attendanceRepository.findByStudentId(studentId);
 
-    List<AttendanceResponse.SubjectRow> subjects = rows.stream()
-            .map(AttendanceResponse.SubjectRow::new)
-            .collect(Collectors.toList());
+        List<AttendanceResponse.SubjectRow> subjects = rows.stream()
+                .map(AttendanceResponse.SubjectRow::new)
+                .collect(Collectors.toList());
 
-    List<AttendanceResponse.MonthPoint> overview = List.of(
-            new AttendanceResponse.MonthPoint("Feb", 82),
-            new AttendanceResponse.MonthPoint("Mar", 85),
-            new AttendanceResponse.MonthPoint("Apr", 79),
-            new AttendanceResponse.MonthPoint("May", 88),
-            new AttendanceResponse.MonthPoint("Jun", 90),
-            new AttendanceResponse.MonthPoint("Jul", 87)
-    );
+        List<AttendanceResponse.MonthPoint> overview = List.of(
+                new AttendanceResponse.MonthPoint("Feb", 82),
+                new AttendanceResponse.MonthPoint("Mar", 85),
+                new AttendanceResponse.MonthPoint("Apr", 79),
+                new AttendanceResponse.MonthPoint("May", 88),
+                new AttendanceResponse.MonthPoint("Jun", 90),
+                new AttendanceResponse.MonthPoint("Jul", 87)
+        );
 
-    return new AttendanceResponse(overview, subjects);
-}
+        return new AttendanceResponse(overview, subjects);
+    }
 }
