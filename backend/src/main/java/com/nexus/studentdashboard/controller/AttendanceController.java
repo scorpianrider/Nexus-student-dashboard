@@ -5,7 +5,6 @@ import com.nexus.studentdashboard.model.Attendance;
 import com.nexus.studentdashboard.repository.AttendanceRepository;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
